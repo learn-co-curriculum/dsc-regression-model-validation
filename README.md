@@ -39,9 +39,9 @@ $r_{i,test} = y_{i,test} - \hat y_{i,test}$
 
 To get a summarized measure over all the instances in the test set and training set, a popular metric is the (Root) Mean Squared Error:
 
-RMSE = $\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_{i} - \hat y_{i})}$
+RMSE = $\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_{i} - \hat y_{i})^2}$
 
-MSE = $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - \hat y_{i})$
+MSE = $\frac{1}{n}\sum_{i=1}^{n}(y_{i} - \hat y_{i})^2$
 
 Again, you can compute these for both the traing and the test set. A big difference in value between the test and training set (R)MSE is an indication of overfitting.
 
