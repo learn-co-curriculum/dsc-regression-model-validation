@@ -29,6 +29,11 @@ Another reason to use train-test-split is because of a common problem which does
 
 <img src='./images/new_overfit_underfit.png'>
 
+### Mechanics of train-test-split
+When performing a train-test-split, it is important that the data is **randomly** split. At some point, you will encounter data sets that have certain characteristics that are only present in certain segments of the data. For example, if you were looking at sales data for a website, you might expect the data to look different on days that promotional deals were held versus days that deals were not held. If we don't randomly split the data, there is a chance we might overfit to the characteristics of certain segments of data.
+
+Another thing to consider is just how big each training and testing set should be. There is no hard and fast rule for deciding the correct size, but the range of training set is usually anywhere from 66% - 80% (and testing set between 33% and 20%). Some types of machine learning models need a substantial amount of data to train on, and as such, the training data sets should be larger. Some models with many different tuning parameters () will need to be validated with larger sets (the test size should be larger) to determine what the optimal parameters should be. When in doubt, just stick with training set sizes around 70% and test set sizes around 30%.
+
 ## How to evaluate?
 
 It is pretty straightforward that, to evaluate our model, you'll want to compare your predicted values, $\hat y$ with the actual value, $y$. The difference between the two values is referred to as the residuals. When using a train test split, you'll compare your residuals for both test set and training set:
