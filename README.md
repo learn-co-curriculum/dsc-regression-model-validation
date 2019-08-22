@@ -76,9 +76,9 @@ data_fin["acc"]= scaled_acc
 data_fin["disp"]= scaled_disp
 data_fin["horse"] = scaled_horse
 data_fin["weight"] = scaled_weight
-cyl_dummies = pd.get_dummies(data["cylinders"], prefix="cyl")
-yr_dummies = pd.get_dummies(data["model year"], prefix="yr")
-orig_dummies = pd.get_dummies(data["origin"], prefix="orig")
+cyl_dummies = pd.get_dummies(data["cylinders"], prefix="cyl", drop_first=True)
+yr_dummies = pd.get_dummies(data["model year"], prefix="yr", drop_first=True)
+orig_dummies = pd.get_dummies(data["origin"], prefix="orig", drop_first=True)
 mpg = data["mpg"]
 data_fin = pd.concat([mpg, data_fin, cyl_dummies, yr_dummies, orig_dummies], axis=1)
 ```
@@ -90,7 +90,7 @@ y = data[["mpg"]]
 X = data.drop(["mpg"], axis=1)
 ```
 
-Scikit-learn has a very useful function `train-test-split`. The optional argument `test_size` makes it possible to choose the size of he test set and the training set.
+Scikit-learn has a very useful function `train-test-split`. The optional argument `test_size` makes it possible to choose the size of the test set and the training set.
 
 
 ```python
@@ -132,9 +132,9 @@ print('Train Mean Squarred Error:', mse_train)
 print('Test Mean Squarred Error:', mse_test)
 ```
 
-    Train Mean Squarred Error: mpg    16.223245
+    Train Mean Squarred Error: mpg    16.727
     dtype: float64
-    Test Mean Squarred Error: mpg    18.395887
+    Test Mean Squarred Error: mpg    16.401681
     dtype: float64
 
 
@@ -150,8 +150,8 @@ print('Train Mean Squarred Error:', train_mse)
 print('Test Mean Squarred Error:', test_mse)
 ```
 
-    Train Mean Squarred Error: 16.22324478035774
-    Test Mean Squarred Error: 18.395887468660337
+    Train Mean Squarred Error: 16.726999858446547
+    Test Mean Squarred Error: 16.401680970510917
 
 
 Great, there does not seem to be a big difference between the train and test MSE!
