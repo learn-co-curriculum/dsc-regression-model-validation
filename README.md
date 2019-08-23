@@ -154,7 +154,7 @@ print('Test Mean Squarred Error:', test_mse)
     Test Mean Squarred Error: 16.401680970510917
 
 
-Great, there does not seem to be a big difference between the train and test MSE!
+Great, there does not seem to be a big difference between the train and test MSE! Interestingly, the test set error is smaller than the training set error. This is fairly rare but does occasionally happen.
 
 ## Additional resources
 
