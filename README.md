@@ -8,10 +8,7 @@ Previously you've briefly touched upon model evaluation when using a multiple li
 ## Objectives
 
 You will:
-- Test a trained model with unseen data and calculate the RMSE 
-- Understand the rationale behind the train-test split approach 
-- Split the data in Pandas and Scikit-Learn using `train_test_split()` 
-- Understand the need for validation testing in predictive analysis 
+* Compare training and testing errors to determine if model is over or underfitting
 
 ## The need for train-test split
 
@@ -19,7 +16,7 @@ You will:
 
 So far we've simply been fitting models to data, and evaluated our models calculating the errors between our $\hat y$ and our actual targets $y$, while these targets $y$ contributed in fitting the model.
 
-The reason why we built the model in the first place, however, is because we want to predict the outcome for observations that are not necessarily in our dataset now. Eg: we want to predict miles per gallon for a new car that isn't part of our dataset, or for a new house in Boston.
+The reason why we built the model in the first place, however, is because we want to predict the outcome for observations that are not necessarily in our dataset now; e.g: we want to predict miles per gallon for a new car that isn't part of our dataset, or for a new house in Boston.
 
 In order to get a good sense of how well your model will be doing on new instances, you'll have to perform a so-called "train-test-split". What you'll be doing here, is take a sample of the data that serves as input to "train" our model - fit a linear regression and compute the parameter estimates for our variables, and calculate how well our predictive performance is doing comparing the actual targets $y$ and the fitted $\hat y$ obtained by our model.
 
