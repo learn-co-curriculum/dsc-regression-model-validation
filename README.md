@@ -36,7 +36,7 @@ Larger (R)MSE indicates a _worse_ model fit.
 
 So far we've simply been fitting models to data, and evaluated our models calculating the errors between our $\hat y$ and our actual targets $y$, while these targets $y$ contributed in fitting the model.
 
-Let's say we want to predict the outcome for observations that are not necessarily in our dataset now; e.g: we want to **predict** miles per gallon for a new car that isn't part of our dataset, or for a new house in Ames.
+Let's say we want to predict the outcome for observations that are not necessarily in our dataset now; e.g: we want to **predict** miles per gallon for a new car that isn't part of our dataset, or predict the price for a new house in Ames.
 
 In order to get a good sense of how well your model will be doing on new instances, you'll have to perform a so-called "train-test-split". What you'll be doing here, is taking a sample of the data that serves as input to "train" our model - fit a linear regression and compute the parameter estimates for our variables, and calculate how well our predictive performance is doing comparing the actual targets $y$ and the fitted $\hat y$ obtained by our model.
 
@@ -601,7 +601,7 @@ test
 
 
 
-In this case, the DataFrame `data` was split into two DataFrames called `train` and `test`. `train` has 294 values and `test` has 98 values. Note the randomized order of the index values on the left.
+In this case, the DataFrame `data` was split into two DataFrames called `train` and `test`. `train` has 294 values (75% of the full dataset) and `test` has 98 values (25% of the full dataset). Note the randomized order of the index values on the left.
 
 However you can also pass multiple array-like variables into `train_test_split` at once. For each variable that you pass in, you will get a train and a test copy back out.
 
@@ -878,7 +878,7 @@ However it is not recommended to pass in just the data to be split. This is beca
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
 ```
 
-Another optional argument is `test_size`, which makes it possible to choose the size of the test set and the training set.
+Another optional argument is `test_size`, which makes it possible to choose the size of the test set and the training set instead of using the default 75% train/25% test proportions.
 
 
 ```python
