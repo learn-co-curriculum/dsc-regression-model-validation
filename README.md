@@ -286,6 +286,7 @@ train
   </thead>
   <tbody>
     <tr>
+<<<<<<< HEAD
       <th>217</th>
       <td>25.5</td>
       <td>4</td>
@@ -332,6 +333,30 @@ train
       <td>76</td>
       <td>3</td>
       <td>toyota corolla</td>
+=======
+      <th>245</th>
+      <td>39.4</td>
+      <td>4</td>
+      <td>85.0</td>
+      <td>70</td>
+      <td>2070</td>
+      <td>18.6</td>
+      <td>78</td>
+      <td>3</td>
+      <td>datsun b210 gx</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>26.0</td>
+      <td>4</td>
+      <td>97.0</td>
+      <td>46</td>
+      <td>1950</td>
+      <td>21.0</td>
+      <td>73</td>
+      <td>2</td>
+      <td>volkswagen super beetle</td>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
     </tr>
     <tr>
       <th>198</th>
@@ -346,6 +371,33 @@ train
       <td>ford granada ghia</td>
     </tr>
     <tr>
+<<<<<<< HEAD
+=======
+      <th>263</th>
+      <td>17.5</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>140</td>
+      <td>4080</td>
+      <td>13.7</td>
+      <td>78</td>
+      <td>1</td>
+      <td>dodge magnum xe</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>15.0</td>
+      <td>8</td>
+      <td>400.0</td>
+      <td>150</td>
+      <td>3761</td>
+      <td>9.5</td>
+      <td>70</td>
+      <td>1</td>
+      <td>chevrolet monte carlo</td>
+    </tr>
+    <tr>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
       <th>...</th>
       <td>...</td>
       <td>...</td>
@@ -358,6 +410,7 @@ train
       <td>...</td>
     </tr>
     <tr>
+<<<<<<< HEAD
       <th>298</th>
       <td>23.9</td>
       <td>8</td>
@@ -416,6 +469,66 @@ train
       <td>78</td>
       <td>3</td>
       <td>datsun 200-sx</td>
+=======
+      <th>129</th>
+      <td>32.0</td>
+      <td>4</td>
+      <td>71.0</td>
+      <td>65</td>
+      <td>1836</td>
+      <td>21.0</td>
+      <td>74</td>
+      <td>3</td>
+      <td>toyota corolla 1200</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>16.0</td>
+      <td>6</td>
+      <td>258.0</td>
+      <td>110</td>
+      <td>3632</td>
+      <td>18.0</td>
+      <td>74</td>
+      <td>1</td>
+      <td>amc matador</td>
+    </tr>
+    <tr>
+      <th>360</th>
+      <td>20.2</td>
+      <td>6</td>
+      <td>200.0</td>
+      <td>88</td>
+      <td>3060</td>
+      <td>17.1</td>
+      <td>81</td>
+      <td>1</td>
+      <td>ford granada gl</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>14.0</td>
+      <td>8</td>
+      <td>440.0</td>
+      <td>215</td>
+      <td>4312</td>
+      <td>8.5</td>
+      <td>70</td>
+      <td>1</td>
+      <td>plymouth fury iii</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>14.0</td>
+      <td>8</td>
+      <td>302.0</td>
+      <td>137</td>
+      <td>4042</td>
+      <td>14.5</td>
+      <td>73</td>
+      <td>1</td>
+      <td>ford gran torino</td>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
     </tr>
   </tbody>
 </table>
@@ -463,6 +576,7 @@ test
   </thead>
   <tbody>
     <tr>
+<<<<<<< HEAD
       <th>135</th>
       <td>13.0</td>
       <td>8</td>
@@ -521,6 +635,66 @@ test
       <td>72</td>
       <td>1</td>
       <td>amc matador (sw)</td>
+=======
+      <th>298</th>
+      <td>23.9</td>
+      <td>8</td>
+      <td>260.0</td>
+      <td>90</td>
+      <td>3420</td>
+      <td>22.2</td>
+      <td>79</td>
+      <td>1</td>
+      <td>oldsmobile cutlass salon brougham</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>15.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150</td>
+      <td>4135</td>
+      <td>13.5</td>
+      <td>72</td>
+      <td>1</td>
+      <td>plymouth fury iii</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>18.0</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>100</td>
+      <td>2789</td>
+      <td>15.0</td>
+      <td>73</td>
+      <td>1</td>
+      <td>amc gremlin</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>18.0</td>
+      <td>8</td>
+      <td>307.0</td>
+      <td>130</td>
+      <td>3504</td>
+      <td>12.0</td>
+      <td>70</td>
+      <td>1</td>
+      <td>chevrolet chevelle malibu</td>
+    </tr>
+    <tr>
+      <th>337</th>
+      <td>23.5</td>
+      <td>6</td>
+      <td>173.0</td>
+      <td>110</td>
+      <td>2725</td>
+      <td>12.6</td>
+      <td>81</td>
+      <td>1</td>
+      <td>chevrolet citation</td>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
     </tr>
     <tr>
       <th>...</th>
@@ -535,6 +709,7 @@ test
       <td>...</td>
     </tr>
     <tr>
+<<<<<<< HEAD
       <th>322</th>
       <td>40.8</td>
       <td>4</td>
@@ -593,6 +768,66 @@ test
       <td>82</td>
       <td>1</td>
       <td>dodge charger 2.2</td>
+=======
+      <th>320</th>
+      <td>46.6</td>
+      <td>4</td>
+      <td>86.0</td>
+      <td>65</td>
+      <td>2110</td>
+      <td>17.9</td>
+      <td>80</td>
+      <td>3</td>
+      <td>mazda glc</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>36.0</td>
+      <td>4</td>
+      <td>79.0</td>
+      <td>58</td>
+      <td>1825</td>
+      <td>18.6</td>
+      <td>77</td>
+      <td>2</td>
+      <td>renault 5 gtl</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>18.5</td>
+      <td>6</td>
+      <td>250.0</td>
+      <td>110</td>
+      <td>3645</td>
+      <td>16.2</td>
+      <td>76</td>
+      <td>1</td>
+      <td>pontiac ventura sj</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>15.0</td>
+      <td>6</td>
+      <td>250.0</td>
+      <td>72</td>
+      <td>3432</td>
+      <td>21.0</td>
+      <td>75</td>
+      <td>1</td>
+      <td>mercury monarch</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>13.0</td>
+      <td>8</td>
+      <td>350.0</td>
+      <td>155</td>
+      <td>4502</td>
+      <td>13.5</td>
+      <td>72</td>
+      <td>1</td>
+      <td>buick lesabre custom</td>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
     </tr>
   </tbody>
 </table>
@@ -664,6 +899,7 @@ X_train
   </thead>
   <tbody>
     <tr>
+<<<<<<< HEAD
       <th>294</th>
       <td>4</td>
       <td>121.0</td>
@@ -711,6 +947,55 @@ X_train
       <td>2901</td>
       <td>16.0</td>
       <td>74</td>
+=======
+      <th>244</th>
+      <td>4</td>
+      <td>78.0</td>
+      <td>52</td>
+      <td>1985</td>
+      <td>19.4</td>
+      <td>78</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>188</th>
+      <td>8</td>
+      <td>351.0</td>
+      <td>152</td>
+      <td>4215</td>
+      <td>12.8</td>
+      <td>76</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>4</td>
+      <td>90.0</td>
+      <td>70</td>
+      <td>1937</td>
+      <td>14.2</td>
+      <td>76</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>382</th>
+      <td>4</td>
+      <td>156.0</td>
+      <td>92</td>
+      <td>2585</td>
+      <td>14.5</td>
+      <td>82</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>254</th>
+      <td>6</td>
+      <td>225.0</td>
+      <td>100</td>
+      <td>3430</td>
+      <td>17.2</td>
+      <td>78</td>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
       <td>1</td>
     </tr>
     <tr>
@@ -724,6 +1009,7 @@ X_train
       <td>...</td>
     </tr>
     <tr>
+<<<<<<< HEAD
       <th>59</th>
       <td>4</td>
       <td>140.0</td>
@@ -771,6 +1057,55 @@ X_train
       <td>3574</td>
       <td>21.0</td>
       <td>76</td>
+=======
+      <th>208</th>
+      <td>6</td>
+      <td>156.0</td>
+      <td>108</td>
+      <td>2930</td>
+      <td>15.5</td>
+      <td>76</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>282</th>
+      <td>6</td>
+      <td>225.0</td>
+      <td>110</td>
+      <td>3360</td>
+      <td>16.6</td>
+      <td>79</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>8</td>
+      <td>350.0</td>
+      <td>145</td>
+      <td>4055</td>
+      <td>12.0</td>
+      <td>76</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>379</th>
+      <td>4</td>
+      <td>91.0</td>
+      <td>67</td>
+      <td>1995</td>
+      <td>16.2</td>
+      <td>82</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>6</td>
+      <td>155.0</td>
+      <td>107</td>
+      <td>2472</td>
+      <td>14.0</td>
+      <td>73</td>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
       <td>1</td>
     </tr>
   </tbody>
@@ -811,6 +1146,7 @@ y_train
   </thead>
   <tbody>
     <tr>
+<<<<<<< HEAD
       <th>294</th>
       <td>27.4</td>
     </tr>
@@ -829,12 +1165,33 @@ y_train
     <tr>
       <th>125</th>
       <td>19.0</td>
+=======
+      <th>244</th>
+      <td>32.8</td>
+    </tr>
+    <tr>
+      <th>188</th>
+      <td>14.5</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <th>382</th>
+      <td>26.0</td>
+    </tr>
+    <tr>
+      <th>254</th>
+      <td>20.5</td>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
+<<<<<<< HEAD
       <th>59</th>
       <td>20.0</td>
     </tr>
@@ -853,6 +1210,26 @@ y_train
     <tr>
       <th>198</th>
       <td>18.0</td>
+=======
+      <th>208</th>
+      <td>19.0</td>
+    </tr>
+    <tr>
+      <th>282</th>
+      <td>20.6</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>379</th>
+      <td>38.0</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>21.0</td>
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
     </tr>
   </tbody>
 </table>
@@ -899,8 +1276,11 @@ print(len(X_train), len(X_test), len(y_train), len(y_test))
 
 When using a train-test split, data preparation should happen _after_ the split. This is to avoid ***data leakage***. The general idea is that the treatment of the test data should be as similar as possible to how genuinely unknown data should be treated. And genuinely unknown data would not have been there at the time of fitting the scikit-learn transformers, just like it would not have been there at the time of fitting the model!
 
+<<<<<<< HEAD
 In some cases you will see all of the data being prepared together for expediency, but the best practice is to prepare it separately.
 
+=======
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
 ### Log Transformation
 
 
@@ -1240,6 +1620,7 @@ X_test
 from sklearn.preprocessing import OneHotEncoder
 
 # Instantiate OneHotEncoder
+<<<<<<< HEAD
 ohe = OneHotEncoder(handle_unknown='ignore', sparse_output=False)
 
 # Create X_cat which contains only the categorical variables
@@ -1268,6 +1649,671 @@ X_test_ohe = pd.DataFrame(ohe.fit_transform(X_test_cat),
                            columns=cat_columns, index=X_test.index)
 ```
 
+=======
+ohe = OneHotEncoder(handle_unknown='ignore', sparse=False)
+
+# Categorical columns
+cat_columns = ['cylinders', 'model year', 'origin']
+
+# Fit encoder on training set
+ohe.fit(X_train[cat_columns])
+
+# Get new column names
+new_cat_columns = ohe.get_feature_names(input_features=cat_columns)
+
+# Transform training set
+X_train_ohe = pd.DataFrame(ohe.fit_transform(X_train[cat_columns]),
+                           columns=new_cat_columns, index=X_train.index)
+
+# Replace training columns with transformed versions
+X_train = pd.concat([X_train.drop(cat_columns, axis=1), X_train_ohe], axis=1)
+X_train
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>acceleration</th>
+      <th>log_disp</th>
+      <th>log_hp</th>
+      <th>log_wt</th>
+      <th>cylinders_3</th>
+      <th>cylinders_4</th>
+      <th>cylinders_5</th>
+      <th>cylinders_6</th>
+      <th>cylinders_8</th>
+      <th>model year_70</th>
+      <th>...</th>
+      <th>model year_76</th>
+      <th>model year_77</th>
+      <th>model year_78</th>
+      <th>model year_79</th>
+      <th>model year_80</th>
+      <th>model year_81</th>
+      <th>model year_82</th>
+      <th>origin_1</th>
+      <th>origin_2</th>
+      <th>origin_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>258</th>
+      <td>18.7</td>
+      <td>5.416100</td>
+      <td>4.700480</td>
+      <td>8.194229</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>14.9</td>
+      <td>4.941642</td>
+      <td>4.521789</td>
+      <td>7.852439</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>14.5</td>
+      <td>5.141664</td>
+      <td>4.574711</td>
+      <td>8.001020</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>13.5</td>
+      <td>5.762051</td>
+      <td>5.010635</td>
+      <td>8.327243</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>16.4</td>
+      <td>4.454347</td>
+      <td>4.158883</td>
+      <td>7.536364</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>12.5</td>
+      <td>5.717028</td>
+      <td>5.010635</td>
+      <td>8.266678</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>15.0</td>
+      <td>5.446737</td>
+      <td>4.605170</td>
+      <td>7.933438</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>270</th>
+      <td>17.6</td>
+      <td>5.017280</td>
+      <td>4.442651</td>
+      <td>7.956827</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>348</th>
+      <td>20.7</td>
+      <td>4.584967</td>
+      <td>4.174387</td>
+      <td>7.774856</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>14.0</td>
+      <td>5.991465</td>
+      <td>5.010635</td>
+      <td>8.516593</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>313 rows × 25 columns</p>
+</div>
+
+
+
+
+```python
+# Transform testing set
+X_test_ohe = pd.DataFrame(ohe.transform(X_test[cat_columns]),
+                           columns=new_cat_columns, index=X_test.index)
+
+# Replace testing columns with transformed versions
+X_test = pd.concat([X_test.drop(cat_columns, axis=1), X_test_ohe], axis=1)
+X_test
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>acceleration</th>
+      <th>log_disp</th>
+      <th>log_hp</th>
+      <th>log_wt</th>
+      <th>cylinders_3</th>
+      <th>cylinders_4</th>
+      <th>cylinders_5</th>
+      <th>cylinders_6</th>
+      <th>cylinders_8</th>
+      <th>model year_70</th>
+      <th>...</th>
+      <th>model year_76</th>
+      <th>model year_77</th>
+      <th>model year_78</th>
+      <th>model year_79</th>
+      <th>model year_80</th>
+      <th>model year_81</th>
+      <th>model year_82</th>
+      <th>origin_1</th>
+      <th>origin_2</th>
+      <th>origin_3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>78</th>
+      <td>18.0</td>
+      <td>4.564348</td>
+      <td>4.234107</td>
+      <td>7.691200</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>274</th>
+      <td>15.7</td>
+      <td>4.795791</td>
+      <td>4.744932</td>
+      <td>7.935587</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>16.4</td>
+      <td>4.510860</td>
+      <td>4.094345</td>
+      <td>7.495542</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>20.5</td>
+      <td>4.510860</td>
+      <td>4.248495</td>
+      <td>7.578145</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>387</th>
+      <td>15.6</td>
+      <td>4.941642</td>
+      <td>4.454347</td>
+      <td>7.933797</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>361</th>
+      <td>16.6</td>
+      <td>5.416100</td>
+      <td>4.442651</td>
+      <td>8.150468</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>15.0</td>
+      <td>4.584967</td>
+      <td>4.382027</td>
+      <td>7.679714</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>13.0</td>
+      <td>5.857933</td>
+      <td>4.976734</td>
+      <td>8.314342</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>12.0</td>
+      <td>5.717028</td>
+      <td>5.010635</td>
+      <td>8.141190</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>14.5</td>
+      <td>4.574711</td>
+      <td>4.477337</td>
+      <td>7.663877</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>79 rows × 25 columns</p>
+</div>
+
+
+
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
 ## Building, Evaluating, and Validating a Model
 
 Great, now that you have preprocessed all the columns, you can fit a linear regression model: 
@@ -1292,16 +2338,26 @@ test_residuals = y_hat_test - y_test
 
 
 ```python
+<<<<<<< HEAD
 mse_train = np.sum((y_train - y_hat_train)**2)/len(y_train)
 mse_test = np.sum((y_test - y_hat_test)**2)/len(y_test)
+=======
+mse_train = float(np.sum((y_train - y_hat_train)**2)/len(y_train))
+mse_test = float(np.sum((y_test - y_hat_test)**2)/len(y_test))
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
 print('Train Mean Squared Error:', mse_train)
 print('Test Mean Squared Error:', mse_test)
 ```
 
+<<<<<<< HEAD
     Train Mean Squared Error: mpg    9.143784
     dtype: float64
     Test Mean Squared Error: mpg    10.010717
     dtype: float64
+=======
+    Train Mean Squared Error: 6.689589737676635
+    Test Mean Squared Error: 5.8967566665747615
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
 
 
 You can also do this directly using sklearn's `mean_squared_error()` function: 
@@ -1316,8 +2372,13 @@ print('Train Mean Squared Error:', train_mse)
 print('Test Mean Squared Error:', test_mse)
 ```
 
+<<<<<<< HEAD
     Train Mean Squared Error: 9.143783702580818
     Test Mean Squared Error: 10.010717292450195
+=======
+    Train Mean Squared Error: 6.689589737676635
+    Test Mean Squared Error: 5.8967566665747615
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
 
 
 Great, there does not seem to be a big difference between the train and test MSE! Interestingly, the test set error is smaller than the training set error. This is fairly rare but does occasionally happen.
@@ -1342,7 +2403,11 @@ print('Test Mean Squared Error:', other_test_mse)
 ```
 
     Train Mean Squared Error: 0.0
+<<<<<<< HEAD
     Test Mean Squared Error: 10.84253164556962
+=======
+    Test Mean Squared Error: 14.577215189873417
+>>>>>>> 3dffad34a59687f4d1073064054d04b7c51cb4c4
 
 
 This model initially seems great...0 MSE for the training data! But then you see that it is performing much worse than our linear regression model on the test data. This model **is** overfitting.
