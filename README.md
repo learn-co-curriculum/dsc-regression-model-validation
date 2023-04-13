@@ -899,11 +899,8 @@ print(len(X_train), len(X_test), len(y_train), len(y_test))
 
 When using a train-test split, data preparation should happen _after_ the split. This is to avoid ***data leakage***. The general idea is that the treatment of the test data should be as similar as possible to how genuinely unknown data should be treated. And genuinely unknown data would not have been there at the time of fitting the scikit-learn transformers, just like it would not have been there at the time of fitting the model!
 
-In some cases you will see all of the data being prepared together for expediency, but the best practice is to prepare it separately.
 
 ### Log Transformation
-
-
 ```python
 from sklearn.preprocessing import FunctionTransformer
 import numpy as np
