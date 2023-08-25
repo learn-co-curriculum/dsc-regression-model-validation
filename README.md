@@ -44,7 +44,7 @@ In order to get a good sense of how well your model will be doing on new instanc
 
 Another reason to use train-test-split is because of a common problem which doesn't only affect linear models, but nearly all (other) machine learning algorithms: overfitting and underfitting. An overfit model is not generalizable and will not hold to future cases. An underfit model does not make full use of the information available and produces weaker predictions than is feasible. The following image gives a nice, more general demonstration:
 
-<img src='./images/new_overfit_underfit.png'>
+<img src='https://curriculum-content.s3.amazonaws.com/data-science/images/new_overfit_underfit.png'>
 
 ## Mechanics of Train-Test Split
 
