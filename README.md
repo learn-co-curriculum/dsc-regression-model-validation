@@ -38,7 +38,7 @@ So far we've simply been fitting models to data, and evaluated our models calcul
 
 Let's say we want to predict the outcome for observations that are not necessarily in our dataset now; e.g: we want to **predict** miles per gallon for a new car that isn't part of our dataset, or predict the price for a new house in Ames.
 
-In order to get a good sense of how well your model will be doing on new instances, you'll have to perform a so-called "train-test-split". What you'll be doing here, is taking a sample of the data that serves as input to "train" our model - fit a linear regression and compute the parameter estimates for our variables, and calculate how well our predictive performance is doing comparing the actual targets $y$ and the fitted $\hat y$ obtained by our model.
+In order to get a good sense of how well your model will be doing on new instances, you'll have to perform a so-called "train-test-split". What you'll be doing here, is taking a sample of the data that serves as input to "train" our model - fit a linear regression and compute the parameter estimates for our variables, and then calculate how well our predictive performance is doing based solely on the "test" data, comparing the actual targets $y$ and the fitted $\hat y$ obtained by our model.
 
 ### Underfitting and Overfitting
 
@@ -61,7 +61,7 @@ You could write your own pandas code to shuffle and split your data, but we'll u
 import pandas as pd
 
 data = pd.read_csv('auto-mpg.csv')
-data
+data.head()
 ```
 
 
@@ -157,81 +157,8 @@ data
       <td>1</td>
       <td>ford torino</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>387</th>
-      <td>27.0</td>
-      <td>4</td>
-      <td>140.0</td>
-      <td>86</td>
-      <td>2790</td>
-      <td>15.6</td>
-      <td>82</td>
-      <td>1</td>
-      <td>ford mustang gl</td>
-    </tr>
-    <tr>
-      <th>388</th>
-      <td>44.0</td>
-      <td>4</td>
-      <td>97.0</td>
-      <td>52</td>
-      <td>2130</td>
-      <td>24.6</td>
-      <td>82</td>
-      <td>2</td>
-      <td>vw pickup</td>
-    </tr>
-    <tr>
-      <th>389</th>
-      <td>32.0</td>
-      <td>4</td>
-      <td>135.0</td>
-      <td>84</td>
-      <td>2295</td>
-      <td>11.6</td>
-      <td>82</td>
-      <td>1</td>
-      <td>dodge rampage</td>
-    </tr>
-    <tr>
-      <th>390</th>
-      <td>28.0</td>
-      <td>4</td>
-      <td>120.0</td>
-      <td>79</td>
-      <td>2625</td>
-      <td>18.6</td>
-      <td>82</td>
-      <td>1</td>
-      <td>ford ranger</td>
-    </tr>
-    <tr>
-      <th>391</th>
-      <td>31.0</td>
-      <td>4</td>
-      <td>119.0</td>
-      <td>82</td>
-      <td>2720</td>
-      <td>19.4</td>
-      <td>82</td>
-      <td>1</td>
-      <td>chevy s-10</td>
-    </tr>
   </tbody>
 </table>
-<p>392 rows × 9 columns</p>
 </div>
 
 
@@ -249,7 +176,7 @@ train, test = train_test_split(data)
 
 
 ```python
-train
+train.head()
 ```
 
 
@@ -286,147 +213,74 @@ train
   </thead>
   <tbody>
     <tr>
-      <th>217</th>
-      <td>25.5</td>
+      <th>181</th>
+      <td>25.0</td>
       <td>4</td>
-      <td>122.0</td>
-      <td>96</td>
-      <td>2300</td>
-      <td>15.5</td>
-      <td>77</td>
-      <td>1</td>
-      <td>plymouth arrow gs</td>
-    </tr>
-    <tr>
-      <th>211</th>
-      <td>13.0</td>
-      <td>8</td>
-      <td>350.0</td>
-      <td>145</td>
-      <td>4055</td>
-      <td>12.0</td>
-      <td>76</td>
-      <td>1</td>
-      <td>chevy c10</td>
-    </tr>
-    <tr>
-      <th>60</th>
-      <td>21.0</td>
-      <td>4</td>
-      <td>122.0</td>
-      <td>86</td>
-      <td>2226</td>
-      <td>16.5</td>
-      <td>72</td>
-      <td>1</td>
-      <td>ford pinto runabout</td>
-    </tr>
-    <tr>
-      <th>203</th>
-      <td>28.0</td>
-      <td>4</td>
-      <td>97.0</td>
-      <td>75</td>
-      <td>2155</td>
-      <td>16.4</td>
-      <td>76</td>
-      <td>3</td>
-      <td>toyota corolla</td>
-    </tr>
-    <tr>
-      <th>198</th>
-      <td>18.0</td>
-      <td>6</td>
-      <td>250.0</td>
-      <td>78</td>
-      <td>3574</td>
-      <td>21.0</td>
-      <td>76</td>
-      <td>1</td>
-      <td>ford granada ghia</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>298</th>
-      <td>23.9</td>
-      <td>8</td>
-      <td>260.0</td>
-      <td>90</td>
-      <td>3420</td>
-      <td>22.2</td>
-      <td>79</td>
-      <td>1</td>
-      <td>oldsmobile cutlass salon brougham</td>
-    </tr>
-    <tr>
-      <th>175</th>
-      <td>23.0</td>
-      <td>4</td>
-      <td>115.0</td>
-      <td>95</td>
-      <td>2694</td>
-      <td>15.0</td>
-      <td>75</td>
-      <td>2</td>
-      <td>audi 100ls</td>
-    </tr>
-    <tr>
-      <th>355</th>
-      <td>30.7</td>
-      <td>6</td>
-      <td>145.0</td>
-      <td>76</td>
-      <td>3160</td>
-      <td>19.6</td>
+      <td>116.0</td>
       <td>81</td>
+      <td>2220</td>
+      <td>16.9</td>
+      <td>76</td>
       <td>2</td>
-      <td>volvo diesel</td>
+      <td>opel 1900</td>
     </tr>
     <tr>
-      <th>93</th>
-      <td>13.0</td>
-      <td>8</td>
-      <td>440.0</td>
-      <td>215</td>
-      <td>4735</td>
-      <td>11.0</td>
-      <td>73</td>
-      <td>1</td>
-      <td>chrysler new yorker brougham</td>
-    </tr>
-    <tr>
-      <th>271</th>
-      <td>23.9</td>
+      <th>387</th>
+      <td>27.0</td>
       <td>4</td>
-      <td>119.0</td>
-      <td>97</td>
-      <td>2405</td>
-      <td>14.9</td>
-      <td>78</td>
+      <td>140.0</td>
+      <td>86</td>
+      <td>2790</td>
+      <td>15.6</td>
+      <td>82</td>
+      <td>1</td>
+      <td>ford mustang gl</td>
+    </tr>
+    <tr>
+      <th>381</th>
+      <td>38.0</td>
+      <td>6</td>
+      <td>262.0</td>
+      <td>85</td>
+      <td>3015</td>
+      <td>17.0</td>
+      <td>82</td>
+      <td>1</td>
+      <td>oldsmobile cutlass ciera (diesel)</td>
+    </tr>
+    <tr>
+      <th>308</th>
+      <td>38.1</td>
+      <td>4</td>
+      <td>89.0</td>
+      <td>60</td>
+      <td>1968</td>
+      <td>18.8</td>
+      <td>80</td>
       <td>3</td>
-      <td>datsun 200-sx</td>
+      <td>toyota corolla tercel</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>16.0</td>
+      <td>8</td>
+      <td>302.0</td>
+      <td>140</td>
+      <td>4141</td>
+      <td>14.0</td>
+      <td>74</td>
+      <td>1</td>
+      <td>ford gran torino</td>
     </tr>
   </tbody>
 </table>
-<p>294 rows × 9 columns</p>
 </div>
 
 
 
 
 ```python
-test
+test.head()
 ```
 
 
@@ -463,140 +317,67 @@ test
   </thead>
   <tbody>
     <tr>
-      <th>135</th>
-      <td>13.0</td>
-      <td>8</td>
-      <td>350.0</td>
-      <td>150</td>
-      <td>4699</td>
-      <td>14.5</td>
-      <td>74</td>
+      <th>259</th>
+      <td>18.1</td>
+      <td>6</td>
+      <td>258.0</td>
+      <td>120</td>
+      <td>3410</td>
+      <td>15.1</td>
+      <td>78</td>
       <td>1</td>
-      <td>buick century luxus (sw)</td>
+      <td>amc concord d/l</td>
     </tr>
     <tr>
-      <th>209</th>
-      <td>16.5</td>
-      <td>6</td>
-      <td>168.0</td>
-      <td>120</td>
-      <td>3820</td>
-      <td>16.7</td>
+      <th>300</th>
+      <td>34.5</td>
+      <td>4</td>
+      <td>105.0</td>
+      <td>70</td>
+      <td>2150</td>
+      <td>14.9</td>
+      <td>79</td>
+      <td>1</td>
+      <td>plymouth horizon tc3</td>
+    </tr>
+    <tr>
+      <th>370</th>
+      <td>37.0</td>
+      <td>4</td>
+      <td>91.0</td>
+      <td>68</td>
+      <td>2025</td>
+      <td>18.2</td>
+      <td>82</td>
+      <td>3</td>
+      <td>mazda glc custom l</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>29.0</td>
+      <td>4</td>
+      <td>90.0</td>
+      <td>70</td>
+      <td>1937</td>
+      <td>14.2</td>
       <td>76</td>
       <td>2</td>
-      <td>mercedes-benz 280s</td>
+      <td>vw rabbit</td>
     </tr>
     <tr>
-      <th>275</th>
-      <td>16.2</td>
-      <td>6</td>
-      <td>163.0</td>
-      <td>133</td>
-      <td>3410</td>
-      <td>15.8</td>
-      <td>78</td>
-      <td>2</td>
-      <td>peugeot 604sl</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>19.0</td>
-      <td>6</td>
-      <td>232.0</td>
-      <td>100</td>
-      <td>2901</td>
-      <td>16.0</td>
-      <td>74</td>
-      <td>1</td>
-      <td>amc hornet</td>
-    </tr>
-    <tr>
-      <th>71</th>
-      <td>15.0</td>
-      <td>8</td>
-      <td>304.0</td>
-      <td>150</td>
-      <td>3892</td>
-      <td>12.5</td>
-      <td>72</td>
-      <td>1</td>
-      <td>amc matador (sw)</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>322</th>
-      <td>40.8</td>
+      <th>313</th>
+      <td>24.3</td>
       <td>4</td>
-      <td>85.0</td>
-      <td>65</td>
-      <td>2110</td>
-      <td>19.2</td>
+      <td>151.0</td>
+      <td>90</td>
+      <td>3003</td>
+      <td>20.1</td>
       <td>80</td>
-      <td>3</td>
-      <td>datsun 210</td>
-    </tr>
-    <tr>
-      <th>82</th>
-      <td>28.0</td>
-      <td>4</td>
-      <td>98.0</td>
-      <td>80</td>
-      <td>2164</td>
-      <td>15.0</td>
-      <td>72</td>
       <td>1</td>
-      <td>dodge colt (sw)</td>
-    </tr>
-    <tr>
-      <th>65</th>
-      <td>17.0</td>
-      <td>8</td>
-      <td>304.0</td>
-      <td>150</td>
-      <td>3672</td>
-      <td>11.5</td>
-      <td>72</td>
-      <td>1</td>
-      <td>amc ambassador sst</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>14.0</td>
-      <td>8</td>
-      <td>302.0</td>
-      <td>140</td>
-      <td>4638</td>
-      <td>16.0</td>
-      <td>74</td>
-      <td>1</td>
-      <td>ford gran torino (sw)</td>
-    </tr>
-    <tr>
-      <th>385</th>
-      <td>36.0</td>
-      <td>4</td>
-      <td>135.0</td>
-      <td>84</td>
-      <td>2370</td>
-      <td>13.0</td>
-      <td>82</td>
-      <td>1</td>
-      <td>dodge charger 2.2</td>
+      <td>amc concord</td>
     </tr>
   </tbody>
 </table>
-<p>98 rows × 9 columns</p>
 </div>
 
 
@@ -629,7 +410,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y)
 
 
 ```python
-X_train
+X_train.head()
 ```
 
 
@@ -664,125 +445,64 @@ X_train
   </thead>
   <tbody>
     <tr>
-      <th>294</th>
-      <td>4</td>
-      <td>121.0</td>
-      <td>80</td>
-      <td>2670</td>
-      <td>15.0</td>
-      <td>79</td>
+      <th>90</th>
+      <td>8</td>
+      <td>400.0</td>
+      <td>150</td>
+      <td>4464</td>
+      <td>12.0</td>
+      <td>73</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>240</th>
-      <td>4</td>
-      <td>121.0</td>
+      <th>241</th>
+      <td>3</td>
+      <td>80.0</td>
       <td>110</td>
-      <td>2600</td>
-      <td>12.8</td>
-      <td>77</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>242</th>
-      <td>4</td>
-      <td>90.0</td>
-      <td>48</td>
-      <td>1985</td>
-      <td>21.5</td>
-      <td>78</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>8</td>
-      <td>351.0</td>
-      <td>153</td>
-      <td>4154</td>
+      <td>2720</td>
       <td>13.5</td>
+      <td>77</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8</td>
+      <td>304.0</td>
+      <td>150</td>
+      <td>3433</td>
+      <td>12.0</td>
+      <td>70</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>6</td>
+      <td>250.0</td>
+      <td>100</td>
+      <td>3329</td>
+      <td>15.5</td>
       <td>71</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>125</th>
-      <td>6</td>
-      <td>232.0</td>
-      <td>100</td>
-      <td>2901</td>
-      <td>16.0</td>
-      <td>74</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>59</th>
+      <th>45</th>
       <td>4</td>
       <td>140.0</td>
-      <td>90</td>
-      <td>2408</td>
-      <td>19.5</td>
       <td>72</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>8</td>
-      <td>302.0</td>
-      <td>140</td>
-      <td>4638</td>
-      <td>16.0</td>
-      <td>74</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>369</th>
-      <td>4</td>
-      <td>105.0</td>
-      <td>74</td>
-      <td>1980</td>
-      <td>15.3</td>
-      <td>82</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>174</th>
-      <td>6</td>
-      <td>232.0</td>
-      <td>90</td>
-      <td>3211</td>
-      <td>17.0</td>
-      <td>75</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>198</th>
-      <td>6</td>
-      <td>250.0</td>
-      <td>78</td>
-      <td>3574</td>
-      <td>21.0</td>
-      <td>76</td>
+      <td>2408</td>
+      <td>19.0</td>
+      <td>71</td>
       <td>1</td>
     </tr>
   </tbody>
 </table>
-<p>294 rows × 7 columns</p>
 </div>
 
 
 
 
 ```python
-y_train
+y_train.head()
 ```
 
 
@@ -811,52 +531,27 @@ y_train
   </thead>
   <tbody>
     <tr>
-      <th>294</th>
-      <td>27.4</td>
+      <th>90</th>
+      <td>13.0</td>
     </tr>
     <tr>
-      <th>240</th>
+      <th>241</th>
       <td>21.5</td>
     </tr>
     <tr>
-      <th>242</th>
-      <td>43.1</td>
+      <th>3</th>
+      <td>16.0</td>
     </tr>
     <tr>
-      <th>39</th>
-      <td>14.0</td>
+      <th>34</th>
+      <td>17.0</td>
     </tr>
     <tr>
-      <th>125</th>
-      <td>19.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>59</th>
-      <td>20.0</td>
-    </tr>
-    <tr>
-      <th>137</th>
-      <td>14.0</td>
-    </tr>
-    <tr>
-      <th>369</th>
-      <td>36.0</td>
-    </tr>
-    <tr>
-      <th>174</th>
-      <td>19.0</td>
-    </tr>
-    <tr>
-      <th>198</th>
-      <td>18.0</td>
+      <th>45</th>
+      <td>22.0</td>
     </tr>
   </tbody>
 </table>
-<p>294 rows × 1 columns</p>
 </div>
 
 
@@ -921,9 +616,7 @@ new_log_columns = ['log_disp', 'log_hp', 'log_wt']
 X_train_log = pd.DataFrame(log_transformer.fit_transform(X_train[log_columns]), 
                            columns=new_log_columns, index=X_train.index)
 
-# Replace training columns with transformed versions
-X_train = pd.concat([X_train.drop(log_columns, axis=1), X_train_log], axis=1)
-X_train
+X_train_log.head()
 ```
 
 
@@ -947,10 +640,6 @@ X_train
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>cylinders</th>
-      <th>acceleration</th>
-      <th>model year</th>
-      <th>origin</th>
       <th>log_disp</th>
       <th>log_hp</th>
       <th>log_wt</th>
@@ -959,117 +648,36 @@ X_train
   <tbody>
     <tr>
       <th>258</th>
-      <td>6</td>
-      <td>18.7</td>
-      <td>78</td>
-      <td>1</td>
       <td>5.416100</td>
       <td>4.700480</td>
       <td>8.194229</td>
     </tr>
     <tr>
       <th>182</th>
-      <td>4</td>
-      <td>14.9</td>
-      <td>76</td>
-      <td>1</td>
       <td>4.941642</td>
       <td>4.521789</td>
       <td>7.852439</td>
     </tr>
     <tr>
       <th>172</th>
-      <td>6</td>
-      <td>14.5</td>
-      <td>75</td>
-      <td>1</td>
       <td>5.141664</td>
       <td>4.574711</td>
       <td>8.001020</td>
     </tr>
     <tr>
       <th>63</th>
-      <td>8</td>
-      <td>13.5</td>
-      <td>72</td>
-      <td>1</td>
       <td>5.762051</td>
       <td>5.010635</td>
       <td>8.327243</td>
     </tr>
     <tr>
       <th>340</th>
-      <td>4</td>
-      <td>16.4</td>
-      <td>81</td>
-      <td>1</td>
       <td>4.454347</td>
       <td>4.158883</td>
       <td>7.536364</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>71</th>
-      <td>8</td>
-      <td>12.5</td>
-      <td>72</td>
-      <td>1</td>
-      <td>5.717028</td>
-      <td>5.010635</td>
-      <td>8.266678</td>
-    </tr>
-    <tr>
-      <th>106</th>
-      <td>6</td>
-      <td>15.0</td>
-      <td>73</td>
-      <td>1</td>
-      <td>5.446737</td>
-      <td>4.605170</td>
-      <td>7.933438</td>
-    </tr>
-    <tr>
-      <th>270</th>
-      <td>4</td>
-      <td>17.6</td>
-      <td>78</td>
-      <td>1</td>
-      <td>5.017280</td>
-      <td>4.442651</td>
-      <td>7.956827</td>
-    </tr>
-    <tr>
-      <th>348</th>
-      <td>4</td>
-      <td>20.7</td>
-      <td>81</td>
-      <td>1</td>
-      <td>4.584967</td>
-      <td>4.174387</td>
-      <td>7.774856</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>8</td>
-      <td>14.0</td>
-      <td>73</td>
-      <td>1</td>
-      <td>5.991465</td>
-      <td>5.010635</td>
-      <td>8.516593</td>
-    </tr>
   </tbody>
 </table>
-<p>313 rows × 7 columns</p>
 </div>
 
 
@@ -1080,9 +688,7 @@ X_train
 X_test_log = pd.DataFrame(log_transformer.transform(X_test[log_columns]), 
                           columns=new_log_columns, index=X_test.index)
 
-# Replace testing columns with transformed versions
-X_test = pd.concat([X_test.drop(log_columns, axis=1), X_test_log], axis=1)
-X_test
+X_test_log.head()
 ```
 
 
@@ -1106,10 +712,6 @@ X_test
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>cylinders</th>
-      <th>acceleration</th>
-      <th>model year</th>
-      <th>origin</th>
       <th>log_disp</th>
       <th>log_hp</th>
       <th>log_wt</th>
@@ -1118,117 +720,36 @@ X_test
   <tbody>
     <tr>
       <th>78</th>
-      <td>4</td>
-      <td>18.0</td>
-      <td>72</td>
-      <td>2</td>
       <td>4.564348</td>
       <td>4.234107</td>
       <td>7.691200</td>
     </tr>
     <tr>
       <th>274</th>
-      <td>4</td>
-      <td>15.7</td>
-      <td>78</td>
-      <td>2</td>
       <td>4.795791</td>
       <td>4.744932</td>
       <td>7.935587</td>
     </tr>
     <tr>
       <th>246</th>
-      <td>4</td>
-      <td>16.4</td>
-      <td>78</td>
-      <td>3</td>
       <td>4.510860</td>
       <td>4.094345</td>
       <td>7.495542</td>
     </tr>
     <tr>
       <th>55</th>
-      <td>4</td>
-      <td>20.5</td>
-      <td>71</td>
-      <td>1</td>
       <td>4.510860</td>
       <td>4.248495</td>
       <td>7.578145</td>
     </tr>
     <tr>
       <th>387</th>
-      <td>4</td>
-      <td>15.6</td>
-      <td>82</td>
-      <td>1</td>
       <td>4.941642</td>
       <td>4.454347</td>
       <td>7.933797</td>
     </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>361</th>
-      <td>6</td>
-      <td>16.6</td>
-      <td>81</td>
-      <td>1</td>
-      <td>5.416100</td>
-      <td>4.442651</td>
-      <td>8.150468</td>
-    </tr>
-    <tr>
-      <th>82</th>
-      <td>4</td>
-      <td>15.0</td>
-      <td>72</td>
-      <td>1</td>
-      <td>4.584967</td>
-      <td>4.382027</td>
-      <td>7.679714</td>
-    </tr>
-    <tr>
-      <th>114</th>
-      <td>8</td>
-      <td>13.0</td>
-      <td>73</td>
-      <td>1</td>
-      <td>5.857933</td>
-      <td>4.976734</td>
-      <td>8.314342</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>8</td>
-      <td>12.0</td>
-      <td>70</td>
-      <td>1</td>
-      <td>5.717028</td>
-      <td>5.010635</td>
-      <td>8.141190</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>4</td>
-      <td>14.5</td>
-      <td>70</td>
-      <td>3</td>
-      <td>4.574711</td>
-      <td>4.477337</td>
-      <td>7.663877</td>
-    </tr>
   </tbody>
 </table>
-<p>79 rows × 7 columns</p>
 </div>
 
 
@@ -1240,33 +761,346 @@ X_test
 from sklearn.preprocessing import OneHotEncoder
 
 # Instantiate OneHotEncoder
-ohe = OneHotEncoder(handle_unknown='ignore', sparse_output=False)
+# Need to use sparse_output=False for sklearn 1.2 or greater
+ohe = OneHotEncoder(drop='first', sparse=False)
 
 # Create X_cat which contains only the categorical variables
-cat_columns = [col for col in X.columns if X[col].dtype in [object]]
+cat_columns = ['origin']
 X_train_cat = X_train.loc[:, cat_columns]
-
-# Fill missing values with the string 'missing'
-X_train_cat.fillna(value='missing', inplace=True)
 
 # Transform training set
 X_train_ohe = pd.DataFrame(ohe.fit_transform(X_train_cat),
-                           columns=cat_columns, index=X_train.index)
+                           index=X_train.index)
+X_train_ohe.head()
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>258</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+# Drop transformed columns
+cols_to_drop = log_columns + cat_columns
+X_train = X_train.drop(columns=cols_to_drop)
+
+# Combine the three datasets into training
+X_train_tr = pd.concat([X_train, X_train_log, X_train_ohe], axis=1)
+X_train_tr.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cylinders</th>
+      <th>acceleration</th>
+      <th>model year</th>
+      <th>log_disp</th>
+      <th>log_hp</th>
+      <th>log_wt</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>258</th>
+      <td>6</td>
+      <td>18.7</td>
+      <td>78</td>
+      <td>5.416100</td>
+      <td>4.700480</td>
+      <td>8.194229</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>4</td>
+      <td>14.9</td>
+      <td>76</td>
+      <td>4.941642</td>
+      <td>4.521789</td>
+      <td>7.852439</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>6</td>
+      <td>14.5</td>
+      <td>75</td>
+      <td>5.141664</td>
+      <td>4.574711</td>
+      <td>8.001020</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>8</td>
+      <td>13.5</td>
+      <td>72</td>
+      <td>5.762051</td>
+      <td>5.010635</td>
+      <td>8.327243</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>340</th>
+      <td>4</td>
+      <td>16.4</td>
+      <td>81</td>
+      <td>4.454347</td>
+      <td>4.158883</td>
+      <td>7.536364</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
 # Transform testing set
-X_test_cat = pd.DataFrame(ohe.transform(X_test[cat_columns]),
-                           columns=cat_columns, index=X_test.index)
-
-# Fill missing values with the string 'missing'
-X_test_cat.fillna(value='missing', inplace=True)
-
-# Transform training set
-X_test_ohe = pd.DataFrame(ohe.fit_transform(X_test_cat),
-                           columns=cat_columns, index=X_test.index)
+X_test_ohe = pd.DataFrame(ohe.transform(X_test[cat_columns]),
+                          index=X_test.index)
+X_test_ohe.head()
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>78</th>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>274</th>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>387</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+X_test = X_test.drop(columns=cols_to_drop)
+
+# Combine test set
+X_test_tr = pd.concat([X_test, X_test_log, X_test_ohe], axis=1)
+X_test_tr.head()
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cylinders</th>
+      <th>acceleration</th>
+      <th>model year</th>
+      <th>log_disp</th>
+      <th>log_hp</th>
+      <th>log_wt</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>78</th>
+      <td>4</td>
+      <td>18.0</td>
+      <td>72</td>
+      <td>4.564348</td>
+      <td>4.234107</td>
+      <td>7.691200</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>274</th>
+      <td>4</td>
+      <td>15.7</td>
+      <td>78</td>
+      <td>4.795791</td>
+      <td>4.744932</td>
+      <td>7.935587</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>4</td>
+      <td>16.4</td>
+      <td>78</td>
+      <td>4.510860</td>
+      <td>4.094345</td>
+      <td>7.495542</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>4</td>
+      <td>20.5</td>
+      <td>71</td>
+      <td>4.510860</td>
+      <td>4.248495</td>
+      <td>7.578145</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>387</th>
+      <td>4</td>
+      <td>15.6</td>
+      <td>82</td>
+      <td>4.941642</td>
+      <td>4.454347</td>
+      <td>7.933797</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 ## Building, Evaluating, and Validating a Model
 
@@ -1276,10 +1110,10 @@ Great, now that you have preprocessed all the columns, you can fit a linear regr
 ```python
 from sklearn.linear_model import LinearRegression
 linreg = LinearRegression()
-linreg.fit(X_train, y_train)
+linreg.fit(X_train_tr, y_train)
 
-y_hat_train = linreg.predict(X_train)
-y_hat_test = linreg.predict(X_test)
+y_hat_train = linreg.predict(X_train_tr)
+y_hat_test = linreg.predict(X_test_tr)
 ```
 
 Look at the residuals and calculate the MSE for training and test sets:  
@@ -1298,9 +1132,9 @@ print('Train Mean Squared Error:', mse_train)
 print('Test Mean Squared Error:', mse_test)
 ```
 
-    Train Mean Squared Error: mpg    9.143784
+    Train Mean Squared Error: mpg    9.091819
     dtype: float64
-    Test Mean Squared Error: mpg    10.010717
+    Test Mean Squared Error: mpg    10.010059
     dtype: float64
 
 
@@ -1316,13 +1150,13 @@ print('Train Mean Squared Error:', train_mse)
 print('Test Mean Squared Error:', test_mse)
 ```
 
-    Train Mean Squared Error: 9.143783702580818
-    Test Mean Squared Error: 10.010717292450195
+    Train Mean Squared Error: 9.091818811315937
+    Test Mean Squared Error: 10.01005948400949
 
 
-Great, there does not seem to be a big difference between the train and test MSE! Interestingly, the test set error is smaller than the training set error. This is fairly rare but does occasionally happen.
+Great, there does not seem to be a big difference between the train and test MSE!
 
-In other words, our validation process has indicated that we are **not** overfitting. In fact, we may be _underfitting_ because linear regression is not a very complex model.
+In other words, our evaluation process has indicated that we are **not** overfitting. In fact, we may be _underfitting_ because linear regression is not a very complex model.
 
 ## Overfitting with a Different Model
 
@@ -1333,19 +1167,19 @@ Just for the sake of example, here is a model that is overfit to the data. Don't
 from sklearn.tree import DecisionTreeRegressor
 
 other_model = DecisionTreeRegressor(random_state=42)
-other_model.fit(X_train, y_train)
+other_model.fit(X_train_tr, y_train)
 
-other_train_mse = mean_squared_error(y_train, other_model.predict(X_train))
-other_test_mse = mean_squared_error(y_test, other_model.predict(X_test))
+other_train_mse = mean_squared_error(y_train, other_model.predict(X_train_tr))
+other_test_mse = mean_squared_error(y_test, other_model.predict(X_test_tr))
 print('Train Mean Squared Error:', other_train_mse)
 print('Test Mean Squared Error:', other_test_mse)
 ```
 
     Train Mean Squared Error: 0.0
-    Test Mean Squared Error: 10.84253164556962
+    Test Mean Squared Error: 11.403164556962025
 
 
-This model initially seems great...0 MSE for the training data! But then you see that it is performing much worse than our linear regression model on the test data. This model **is** overfitting.
+This model initially seems great...0 MSE for the training data! But then you see that it is performing worse than our linear regression model on the test data. This model **is** overfitting.
 
 ## Additional Resources
 
