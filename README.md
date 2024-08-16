@@ -1106,6 +1106,12 @@ X_test_tr.head()
 
 Great, now that you have preprocessed all the columns, you can fit a linear regression model: 
 
+```python
+# convert feature names to strings so there is not a TypeError with sklearn
+
+X_train_tr.columns = X_train_tr.columns.astype(str)
+X_test_tr.columns = X_test_tr.columns.astype(str)
+```
 
 ```python
 from sklearn.linear_model import LinearRegression
